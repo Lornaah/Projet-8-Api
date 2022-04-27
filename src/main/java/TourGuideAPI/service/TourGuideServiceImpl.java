@@ -2,7 +2,6 @@ package TourGuideAPI.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import TourGuideAPI.dto.User;
@@ -13,8 +12,7 @@ import gpsUtil.location.VisitedLocation;
 @Service
 public class TourGuideServiceImpl implements TourGuideService {
 
-	@Autowired
-	GpsUtil gpsUtil;
+	private final GpsUtil gpsUtil = new GpsUtil();
 
 	@Override
 	public VisitedLocation getUserLocation(User user) {
