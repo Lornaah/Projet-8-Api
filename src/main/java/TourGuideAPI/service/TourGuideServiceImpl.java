@@ -1,10 +1,10 @@
 package TourGuideAPI.service;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
-import TourGuideAPI.dto.User;
 import gpsUtil.GpsUtil;
 import gpsUtil.location.Attraction;
 import gpsUtil.location.VisitedLocation;
@@ -15,8 +15,8 @@ public class TourGuideServiceImpl implements TourGuideService {
 	private final GpsUtil gpsUtil = new GpsUtil();
 
 	@Override
-	public VisitedLocation getUserLocation(User user) {
-		return gpsUtil.getUserLocation(user.getUserId());
+	public VisitedLocation getUserLocation(UUID id) {
+		return gpsUtil.getUserLocation(id);
 	}
 
 	@Override

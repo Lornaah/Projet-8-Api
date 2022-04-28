@@ -1,14 +1,14 @@
 package TourGuideAPI.service;
 
 import java.util.List;
+import java.util.UUID;
 
-import TourGuideAPI.dto.User;
 import gpsUtil.location.Attraction;
 import gpsUtil.location.VisitedLocation;
 
 public interface TourGuideService {
 
-	VisitedLocation getUserLocation(User user);
+	VisitedLocation getUserLocation(UUID id);
 
 	List<Attraction> getAttraction();
 
